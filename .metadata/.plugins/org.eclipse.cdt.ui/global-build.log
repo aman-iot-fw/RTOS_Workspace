@@ -1,0 +1,21 @@
+13:57:38 **** Incremental Build of configuration Debug for project 003LED_Block_Tasks ****
+make -j8 all 
+arm-none-eabi-size   003LED_Block_Tasks.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24088	     36	 110092	 134216	  20c48	003LED_Block_Tasks.elf
+Finished building: default.size.stdout
+ 
+13:57:42 **** Incremental Build of configuration Debug for project 003LED_Block_Tasks ****
+make -j8 all 
+arm-none-eabi-size   003LED_Block_Tasks.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24088	     36	 110092	 134216	  20c48	003LED_Block_Tasks.elf
+Finished building: default.size.stdout
+ 
+13:59:43 **** Incremental Build of configuration Debug for project 005LED_Task_Notify ****
+make -j8 all 
+arm-none-eabi-size   005LED_Task_Notify.elf 
+   text	   data	    bss	    dec	    hex	filename
+  26052	     36	 110116	 136204	  2140c	005LED_Task_Notify.elf
+Finished building: default.size.stdout
+ 

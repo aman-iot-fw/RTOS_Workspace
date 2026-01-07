@@ -1,0 +1,26 @@
+13:43:55 **** Incremental Build of configuration Debug for project BMI160_GyroAcc_Task ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I"D:/RTOS/ThirdWorkspace/RTOS_workspace/common/ThirdParty/FreeRTOS/include" -I"D:/RTOS/ThirdWorkspace/RTOS_workspace/common/ThirdParty/FreeRTOS/portable/GCC/ARM_CM4F" -I"D:/RTOS/ThirdWorkspace/RTOS_workspace/common/ThirdParty/SEGGER/Config" -I"D:/RTOS/ThirdWorkspace/RTOS_workspace/common/ThirdParty/SEGGER/OS" -I"D:/RTOS/ThirdWorkspace/RTOS_workspace/common/ThirdParty/SEGGER/SEGGER" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'vUARTTask':
+../Core/Src/main.c:387:55: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  387 |             HAL_UART_Transmit(&huart2, (uint8_t*)str, strlen(str), HAL_MAX_DELAY);
+      |                                                       ^~~~~~
+../Core/Src/main.c:387:55: warning: incompatible implicit declaration of built-in function 'strlen'
+../Core/Src/main.c:32:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   31 | #include "BMI160.h"
+  +++ |+#include <string.h>
+   32 | 
+arm-none-eabi-gcc -o "BMI160_GyroAcc_Task.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\RTOS\ThirdWorkspace\RTOS_workspace\BMI160_GyroAcc_Task\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="BMI160_GyroAcc_Task.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: BMI160_GyroAcc_Task.elf
+ 
+arm-none-eabi-size   BMI160_GyroAcc_Task.elf 
+arm-none-eabi-objdump -h -S  BMI160_GyroAcc_Task.elf  > "BMI160_GyroAcc_Task.list"
+   text	   data	    bss	    dec	    hex	filename
+  26440	     28	 106084	 132552	  205c8	BMI160_GyroAcc_Task.elf
+Finished building: default.size.stdout
+ 
+Finished building: BMI160_GyroAcc_Task.list
+ 
+
+13:43:57 Build Finished. 0 errors, 2 warnings. (took 1s.334ms)
+

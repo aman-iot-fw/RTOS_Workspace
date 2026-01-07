@@ -1,0 +1,4 @@
+../Core/Src/BMI160.c:6:6:bmi_read_address	16	static
+../Core/Src/BMI160.c:12:6:bmi_write	24	static
+../Core/Src/BMI160.c:20:6:bmi_read_values	16	static
+../Core/Src/BMI160.c:27:6:bmi_init	8	static
