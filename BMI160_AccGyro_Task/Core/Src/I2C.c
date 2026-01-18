@@ -1,3 +1,8 @@
+/*
+file   : Custom I2C driver 
+Author : Aman Yadav
+*/
+
 #include "stm32f4xx.h"
 
 #define 	GPIOBEN			(1U<<1)
