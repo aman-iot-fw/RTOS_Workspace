@@ -1,3 +1,8 @@
+/*
+file   : BMI160(Intertial Sensor) driver and configurable file. 
+Author : Aman Yadav
+*/
+
 #include "BMI160.h"
 
 uint8_t data;
